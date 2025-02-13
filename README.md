@@ -8,7 +8,7 @@ Meu portfólio é uma página interativa e responsiva desenvolvida com HTML, CSS
 
 ## 🌐 Implantação
 
-O portfólio está disponível online em: **Virgínia Colares - Portfólio**
+O portfólio está disponível online em: [**Virgínia Colares - Portfólio**](https://vmcolares.github.io/virginia-colares/)
 
 ## 📬 Contato
 
