@@ -24,6 +24,19 @@ header {
     width: 98%;
 }
 
+section {
+    padding: 60px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+footer {
+    background-color: #e8e3de;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
 h2 {
     font-family: 'Cormorant', serif;
 }
@@ -32,6 +45,7 @@ h1, h2 {
     font-weight: 700;
 }
 
+/* MENU  */
 nav ul {
     list-style: none;
     display: flex;
@@ -40,14 +54,92 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #000;
+    color: #5c4039;
     font-weight: bold;
+    margin-right: 10px;
+}
+
+.navbar-toggle {
+    display: none;
+    padding: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 50px;
+    z-index: 1000;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 4px;
+    background-color: #96695e;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+    display: block;
+    border-radius: 5px;
+}
+
+.navbar-menu.show {
+    max-height: 300px;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #faf9f8;
+        width: 250px;
+        padding: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        opacity: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.show {
+        display: flex;
+        opacity: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        color: #96695e;
+    }
+
+    .home {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
 }
 
 .home {
     color: #96695e;
 }
 
+/* Inicio */
 #hero {
     display: flex;
     align-items: center;
@@ -66,6 +158,8 @@ nav a {
     gap: 40px;
     flex-direction: row-reverse;
     position: relative;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .hero-text {
@@ -114,12 +208,15 @@ nav a {
     flex: 1;
     display: flex;
     justify-content: center;
-    position: relative;    
+    position: relative;
+    margin-top: 10px;
+    top: 20px; 
 }
 
 .hero-image img {
     max-width: 450px;
     z-index: 2;
+    transition: max-width 0.3s ease;
 }
 
 .hero-image::before {
@@ -132,19 +229,52 @@ nav a {
     height: 400px;
     background-color: #e8e3de;
     z-index: 1;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
-section {
-    padding: 60px;
-    text-align: center;
-    font-family: 'Roboto Slab', serif;
-}
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+    }
 
-footer {
-    background-color: #e8e3de;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #ddd;
+    .hero-text {
+        padding: 0 30px 30px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image {
+        flex: none;
+        margin: 15px;
+        top: 150px;
+    }
+
+    .hero-image img {
+        max-width: 50%;
+    }
+
+    .hero-image::before {
+        display: none;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+        margin-top: 100px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
 }
 
 /* Formas geométricas decorativas */
@@ -355,6 +485,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease
 }
 
 .projeto-card img {
@@ -400,8 +531,26 @@ footer {
     transform: scale(1.05);
 }
 
-.projeto-card:hover img {
-    transform: scale(1.1);
+@media (max-width: 768px) {
+    .projetos-container {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto-card img {
+        height: 100px;
+    }
+
+    .projeto-card h3 {
+        font-size: 1rem;
+    }
+
+    .projeto-card {
+        padding: 15px;
+        width: 80%;       
+    }
 }
 
 /* Secão contato */
