@@ -3,253 +3,850 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Virgínia Colares</title>
+    <title>Virgínia Colares - Desenvolvedora Full Stack</title>
+    <meta name="description" content="Portfolio de Virgínia Colares - Desenvolvedora Full Stack especializada em TypeScript, Angular, Node.js e Spring Boot">
+    <meta name="keywords" content="desenvolvedor, full stack, typescript, angular, nodejs, spring boot, react">
+    <meta name="author" content="Virgínia Colares">
+    <meta name="theme-color" content="#faf9f8">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Virgínia Colares - Desenvolvedora Full Stack">
+    <meta property="og:description" content="Portfolio de Virgínia Colares - Desenvolvedora Full Stack especializada em TypeScript, Angular, Node.js e Spring Boot">
+    <meta property="og:image" content="./assets/images/virginia.png">
+    <meta property="og:url" content="https://vmcolares.github.io">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Virgínia Colares - Desenvolvedora Full Stack">
+    <meta property="twitter:description" content="Portfolio de Virgínia Colares - Desenvolvedora Full Stack especializada em TypeScript, Angular, Node.js e Spring Boot">
+    <meta property="twitter:image" content="./assets/images/virginia.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍💻</text></svg>">
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display:wght@400;700&family=Cormorant:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles/globals.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/hero.css">
+    <link rel="stylesheet" href="src/styles/sections.css">
 </head>
 <body>
-    <header>
-        <h1 class="home"><span id="virginia-colares" class="clickable">Virgínia Colares</span></h1>
-        <div class="navbar-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo" data-scroll-to="#hero">
+                Virgínia Colares
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#experiencia" class="nav-link">Experiência</a>
+                <a href="#competencias" class="nav-link">Competências</a>
+                <a href="#projetos" class="nav-link">Projetos</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+            
+            <div class="flex items-center gap-md">
+                <button class="theme-toggle" aria-label="Alternar tema">
+                    <!-- Icon será inserido via JavaScript -->
+                </button>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
         </div>
-        <nav>
-            <ul class="navbar-menu">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#competencias">Competências</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <nav class="mobile-nav-menu">
+                <a href="#sobre" class="mobile-nav-link">Sobre</a>
+                <a href="#experiencia" class="mobile-nav-link">Experiência</a>
+                <a href="#competencias" class="mobile-nav-link">Competências</a>
+                <a href="#projetos" class="mobile-nav-link">Projetos</a>
+                <a href="#contato" class="mobile-nav-link">Contato</a>
+            </nav>
+        </div>
     </header>
-    
-    <section id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h2 class="welcome">Oi! Eu sou a Virgínia Colares</h2>
-                <p>Técnica em Informática, Bacharela em Sistemas de Informação e Mestranda em Ciência da Computação.
-                    Desenvolvedora apaixonada por tecnologia, ensino e inovação. 
-                    Entusiasta de UX/UI, apaixonada por front-end, e com grande interesse em gerenciamento de 
-                    projetos de software e metodologias ágeis. Saiba mais sobre mim abaixo.</p>
-                <a id="ver-sobre-mim" class="btn">Sobre Mim</a>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">
+                    Olá! Eu sou a
+                </div>
+                <h1 class="hero-title">Virgínia Colares</h1>
+                <p class="hero-subtitle">
+                    Desenvolvedora Full Stack especializada em criar experiências digitais modernas e eficientes. 
+                    Apaixonada por tecnologia, ensino e inovação.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#sobre" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        Sobre Mim
+                    </a>
+                    <a href="#projetos" class="btn btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6"/>
+                        </svg>
+                        Ver Projetos
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat" style="display: none;">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Projetos Concluídos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Tecnologias</span>
+                    </div>
+                </div>
             </div>
+            
             <div class="hero-image">
-                <img src="assets/images/virginia.png" alt="Foto de Virginia Colares">
+                <img src="assets/images/virginia.png" alt="Virgínia Colares" class="hero-avatar">
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element">
+            <div class="floating-shape"></div>
+        </div>
+        <div class="floating-element">
+            <div class="floating-shape"></div>
+        </div>
+        <div class="floating-element">
+            <div class="floating-shape"></div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="sobre" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Mim</h2>
+                <p class="section-subtitle">
+                    Conheça minha trajetória e paixão pela tecnologia
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/image2.jpg" alt="Virgínia Colares" class="about-avatar">
+                </div>
+                
+                <div class="about-text">
+                    <p>
+                        Sou natural de Bagé e trigêmea, sempre fui determinada e ativa. Minha jornada na tecnologia começou no ensino 
+                        médio, quando escolhi cursar <span class="highlight">Técnico em Informática</span> integrado ao ensino médio. 
+                        Foi nesse período que me apaixonei pela programação e pelo potencial da tecnologia.
+                    </p>
+                    <p>
+                        Durante esses anos, me envolvi em projetos de pesquisa, organização de eventos voltados à tecnologia, 
+                        monitorias e diversas outras atividades que fortaleceram minha curiosidade e vontade de aprender.
+                    </p>
+                    <p>
+                        Ao ingressar na universidade, optei inicialmente por <span class="highlight">Engenharia de Computação</span> na UFSM, 
+                        buscando entender mais sobre hardware. No entanto, após dois anos, percebi que minha verdadeira vocação estava 
+                        no desenvolvimento de software e troquei para o curso de <span class="highlight">Sistemas de Informação</span>, 
+                        no qual me formei.
+                    </p>
+                    <p>
+                        Durante a graduação, fui bolsista de pesquisa, estagiária, integrante do grupo PET e representante do colegiado. 
+                        Sempre fui muito ativa, gosto de desafios, de aprender coisas novas e de ir além do que é esperado.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2014 - 2018</div>
+                        <h3 class="timeline-title">Técnico em Informática</h3>
+                        <p class="timeline-description">IFSul Campus Bagé</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018 - 2022</div>
+                        <h3 class="timeline-title">Engenharia de Computação</h3>
+                        <p class="timeline-description">Universidade Federal de Santa Maria - UFSM (Incompleto)</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2024</div>
+                        <h3 class="timeline-title">Bacharelado em Sistemas de Informação</h3>
+                        <p class="timeline-description">Universidade Federal de Santa Maria - UFSM</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Atual</div>
+                        <h3 class="timeline-title">Mestrado em Ciência da Computação</h3>
+                        <p class="timeline-description">Universidade Federal de Santa Maria - UFSM</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Sou natural de Bagé e trigêmea, sempre fui determinada e ativa. Minha jornada na tecnologia começou no ensino 
-            médio, quando escolhi cursar Técnico em Informática integrado ao ensino médio. Foi nesse período que me apaixonei 
-            pela programação e pelo potencial da tecnologia. Durante esses anos, me envolvi em projetos de pesquisa, 
-            organização de eventos voltados à tecnologia, monitorias e diversas outras atividades que fortaleceram minha 
-            curiosidade e vontade de aprender.</p>
-        <p>Ao ingressar na universidade, optei inicialmente por Engenharia de Computação na UFSM, buscando entender mais sobre 
-            hardware. No entanto, após dois anos, percebi que minha verdadeira vocação estava no desenvolvimento de software 
-            e troquei para o curso de Sistemas de Informação, no qual me formei. Durante a graduação, fui bolsista de pesquisa, 
-            estagiária, integrante do grupo PET e representante do colegiado. Sempre fui muito ativa, gosto de desafios, 
-            de aprender coisas novas e de ir além do que é esperado.</p>
-        <h3>Minha trajetória acadêmica:</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-spacing"></div>
-                <div class="timeline-content">
-                    <h3>Técnico em Informática</h3>
-                    <p>Agosto 2014 - Agosto 2018</p>
-                    <p>IFSul Campus Bagé</p>
+    <!-- Experience Section -->
+    <section id="experiencia" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Experiência Profissional</h2>
+                <p class="section-subtitle">
+                    Minha trajetória no desenvolvimento de software
+                </p>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <h3 class="experience-title">Desenvolvedora de Software Júnior</h3>
+                            <p class="experience-company">Animati netPacs, Santa Maria - RS</p>
+                        </div>
+                        <span class="experience-period">Jul 2023 - Atual</span>
+                    </div>
+                    <p class="experience-description">
+                        Desenvolvimento de aplicações web usando Angular, TypeScript, Java Spring Boot e integração com bancos de dados. 
+                        Participação em projetos de sistemas médicos e implementação de funcionalidades front-end e back-end.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Angular</span>
+                        <span class="experience-tag">TypeScript</span>
+                        <span class="experience-tag">Java</span>
+                        <span class="experience-tag">Spring Boot</span>
+                        <span class="experience-tag">PostgreSQL</span>
+                        <span class="experience-tag">Git</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <h3 class="experience-title">Estagiária de Desenvolvimento</h3>
+                            <p class="experience-company">Animati netPacs, Santa Maria - RS</p>
+                        </div>
+                        <span class="experience-period">Jul 2022 - Jun 2023</span>
+                    </div>
+                    <p class="experience-description">
+                        Aprendizado e desenvolvimento de habilidades em tecnologias web modernas. Participação em projetos reais 
+                        e colaboração com equipe experiente no desenvolvimento de software médico.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">JavaScript</span>
+                        <span class="experience-tag">HTML/CSS</span>
+                        <span class="experience-tag">Angular</span>
+                        <span class="experience-tag">Java</span>
+                        <span class="experience-tag">MySQL</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <h3 class="experience-title">Estagiária de Desenvolvimento</h3>
+                            <p class="experience-company">SIS-ASTROS GMF, Santa Maria - RS</p>
+                        </div>
+                        <span class="experience-period">Set 2021 - Jun 2022</span>
+                    </div>
+                    <p class="experience-description">
+                        Desenvolvimento de sistemas internos e aprendizado de metodologias de desenvolvimento de software. 
+                        Primeira experiência profissional na área de tecnologia.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">C#</span>
+                        <span class="experience-tag">Unity 3D</span>
+                        <span class="experience-tag">HTML</span>
+                        <span class="experience-tag">CSS</span>
+                        <span class="experience-tag">JavaScript</span>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-spacing"></div>
-                <div class="timeline-content">
-                    <h3>Engenharia de Computação (Incompleto)</h3>
-                    <p>Agosto 2018 - Agosto 2022</p>
-                    <p>Universidade Federal de Santa Maria - UFSM</p>
-                </div>
+            
+            <!-- Academic Experience -->
+            <div class="experience-divider">
+                <span class="experience-divider-text">Atuação Acadêmica</span>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-spacing"></div>
-                <div class="timeline-content">
-                    <h3>Bacharelado em Sistemas de Informação</h3>
-                    <p>Agosto 2022 - 2024</p>
-                    <p>Universidade Federal de Santa Maria - UFSM</p>
+                
+            <div class="experience-grid">
+                <div class="experience-card" data-type="academic">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <h4 class="experience-title">Bolsista PET Sistemas de Informação</h4>
+                            <p class="experience-company">UFSM</p>
+                        </div>
+                        <span class="experience-period">Mai 2023 - Ago 2024</span>
+                    </div>
+                    <p class="experience-description">
+                        Participação em atividades de ensino, pesquisa e extensão. Desenvolvimento de projetos acadêmicos 
+                        e organização de eventos científicos na área de Sistemas de Informação.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Pesquisa</span>
+                        <span class="experience-tag">Ensino</span>
+                        <span class="experience-tag">Extensão</span>
+                        <span class="experience-tag">Eventos</span>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-spacing"></div>
-                <div class="timeline-content">
-                    <h3>Mestrado em Ciência de Computação</h3>
-                    <p>2024 - (Em andamento)</p>
-                    <p>Universidade Federal de Santa Maria - UFSM</p>
+                
+                <div class="experience-card" data-type="academic">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <h4 class="experience-title">Representante Discente do Colegiado</h4>
+                            <p class="experience-company">UFSM</p>
+                        </div>
+                        <span class="experience-period">Out 2022 - Ago 2024</span>
+                    </div>
+                    <p class="experience-description">
+                        Representação dos estudantes nas decisões do colegiado do curso. Participação ativa 
+                        em discussões sobre melhorias curriculares e políticas acadêmicas.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Liderança</span>
+                        <span class="experience-tag">Representação</span>
+                        <span class="experience-tag">Gestão</span>
+                    </div>
+                </div>
+                
+                <div class="experience-card" data-type="academic">
+                    <div class="experience-header">
+                        <div class="experience-meta">
+                            <h4 class="experience-title">Bolsista de Apoio Técnico UNITI LINCE CE</h4>
+                            <p class="experience-company">UFSM</p>
+                        </div>
+                        <span class="experience-period">Mar 2019 - Ago 2021</span>
+                    </div>
+                    <p class="experience-description">
+                        Suporte técnico em laboratórios de informática e apoio a atividades de ensino. 
+                        Primeira experiência com tecnologia na universidade.
+                    </p>
+                    <div class="experience-tags">
+                        <span class="experience-tag">Suporte Técnico</span>
+                        <span class="experience-tag">Laboratórios</span>
+                        <span class="experience-tag">Ensino</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <section id="experiencia">
-        <h2>Experiência</h2>
-        <div class="experiencia-container">
-            <div class="experiencia-item">
-                <h3>Desenvolvedora de Software Júnior</h3>
-                <p class="empresa">Animati netPacs, Santa Maria - RS</p>
-                <p class="periodo">Julho de 2023 - Até o momento</p>
-            </div>
-            <div class="experiencia-item">
-                <h3>Estagiária de Desenvolvimento</h3>
-                <p class="empresa">Animati netPacs, Santa Maria - RS</p>
-                <p class="periodo">Julho de 2022 - Junho de 2023</p>
-            </div>
-            <div class="experiencia-item">
-                <h3>Estagiária de Desenvolvimento</h3>
-                <p class="empresa">SIS-ASTROS GMF, Santa Maria - RS</p>
-                <p class="periodo">Setembro de 2021 - Junho de 2022</p>
-            </div>
-        </div>        
     </section>
 
-    <section id="academico">
-        <h2>Atuação Acadêmica e Projetos</h2>
-        <ul class="academico-lista">
-            <li><strong>Bolsista do PET Sistemas de Informação</strong> (Mai/2023 - Ago/2024)</li>
-            <li><strong>Representante Discente do Colegiado</strong> (Out/2022 - Ago/2024)</li>
-            <li><strong>Bolsista de Apoio Técnico UNITI LINCE CE</strong> (Mar/2019 - Ago/2021)</li>
-            <li><strong>Jogo Sério Educacional estilo Escape Room</strong> (Mar/2023 - Ago/2023)</li>
-            <li><strong>Risco em Jogo: um jogo de tabuleiro para o ensino-aprendizagem em gerência de projetos de software</strong> (Trabalho de Conclusão de Curso)</li>
-        </ul>
+    <!-- Skills Section -->
+    <section id="competencias" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Competências Técnicas</h2>
+                <p class="section-subtitle">
+                    Tecnologias e ferramentas que domino
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">HTML5</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">CSS3</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">JavaScript</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.213.776.213 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/>
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">TypeScript</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-angular"></i>
+                    </div>
+                    <h4 class="skill-name">Angular</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/>
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">Java</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.205 16.392c-2.469 3.289-7.741 2.179-11.122 2.338 0 0-.599.034-1.201.133 0 0 .228-.097.519-.198 2.374-.821 3.496-.986 4.939-1.727 2.71-1.388 5.408-4.413 5.957-7.555-1.032 3.022-4.17 5.623-7.027 6.679-1.955.722-5.492 1.424-5.493 1.424a5.28 5.28 0 0 1-.143-.076c-2.405-1.17-2.475-6.38 1.894-8.059 1.916-.736 3.747-.332 5.818-.825 2.208-.525 4.766-2.18 5.805-4.344 1.165 3.458 2.565 8.866.054 12.21zm.042-13.28a9.212 9.212 0 0 1-1.065 1.89 9.982 9.982 0 0 0-7.167-3.031C6.492 1.971 2 6.463 2 11.985A9.983 9.983 0 0 0 11.015 22c.054 0 .054 0 .108 0a9.999 9.999 0 0 0 10.015-10.015c0-5.09-3.8-9.245-8.686-9.873.318-.452.614-.875.795-1.0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">Spring Boot</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h4 class="skill-name">Node.js</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h4 class="skill-name">SQL</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-bootstrap"></i>
+                    </div>
+                    <h4 class="skill-name">Bootstrap</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-git-alt"></i>
+                    </div>
+                    <h4 class="skill-name">Git</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <span style="font-size: 32px; font-weight: bold; color: var(--text-primary);">H</span>
+                    </div>
+                    <h4 class="skill-name">Hibernate</h4>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-mdb"></i>
+                    </div>
+                    <h4 class="skill-name">Material Bootstrap Design</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projetos" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <p class="section-subtitle">
+                    Alguns dos projetos que desenvolvi
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/logorx.png" alt="Raio Xcape">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Raio Xcape - Quiz Radiologia</h3>
+                        <p class="project-description">
+                            Jogo educacional em formato de quiz para ensino de radiologia. 
+                            Desenvolvido com foco na experiência do usuário e gamificação.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Game Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/raioxcape/raioxcape" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/logo-universe.png" alt="Universe">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Universe - Teste Vocacional</h3>
+                        <p class="project-description">
+                            Aplicação web para teste vocacional com algoritmos de recomendação. 
+                            Interface moderna e experiência personalizada para cada usuário.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Algorithm</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/elc1074-universe/universe" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/riscoemjogo.png" alt="Risco em Jogo">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Risco em Jogo</h3>
+                        <p class="project-description">
+                            Jogo de tabuleiro educacional para ensino de gerência de projetos de software. 
+                            Projeto do TCC com foco em metodologias ágeis e gamificação.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Game Design</span>
+                            <span class="tech-tag">Scrum</span>
+                            <span class="tech-tag">Agile</span>
+                            <span class="tech-tag">Education</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://vmcolares.github.io/risco-em-jogo/" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div style="
+                            background: linear-gradient(135deg, #FFE5E8 0%, #FFF0F5 25%, #F5E5FF 50%, #E8F5FF 75%, #F0F8FF 100%);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 200px;
+                            border-radius: var(--radius-md);
+                            margin-bottom: var(--space-lg);
+                            position: relative;
+                            overflow: hidden;
+                            box-shadow: inset 0 2px 4px rgba(255, 157, 162, 0.2);
+                        ">
+                            <div style="
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                width: 40px;
+                                height: 40px;
+                                background: rgba(255, 157, 162, 0.3);
+                                border-radius: 8px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 0.7rem;
+                                color: #E8587A;
+                                font-weight: 600;
+                            ">
+                                2
+                            </div>
+                            <div style="
+                                position: absolute;
+                                bottom: 20px;
+                                left: 20px;
+                                width: 35px;
+                                height: 35px;
+                                background: rgba(255, 182, 193, 0.4);
+                                border-radius: 6px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 0.65rem;
+                                color: #D1477A;
+                                font-weight: 600;
+                            ">
+                                4
+                            </div>
+                            <span style="
+                                font-size: 2.8rem;
+                                font-weight: 700;
+                                background: linear-gradient(45deg, #ff9da2, #ff7a85, #ffa8b5, #ff85a1);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                background-clip: text;
+                                font-family: 'Comic Sans MS', 'Marker Felt', 'Bradley Hand', cursive;
+                                text-shadow: 2px 2px 8px rgba(255, 157, 162, 0.3);
+                                letter-spacing: 2px;
+                                position: relative;
+                            ">
+                                2048
+                            </span>
+                            <div style="
+                                position: absolute;
+                                top: 50%;
+                                left: 30px;
+                                width: 30px;
+                                height: 30px;
+                                background: rgba(255, 157, 162, 0.3);
+                                border-radius: 50%;
+                                transform: translateY(-50%);
+                            "></div>
+                            <div style="
+                                position: absolute;
+                                bottom: 30px;
+                                right: 30px;
+                                width: 25px;
+                                height: 25px;
+                                background: rgba(255, 182, 193, 0.4);
+                                border-radius: 4px;
+                                transform: rotate(45deg);
+                            "></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">2048 Game</h3>
+                        <p class="project-description">
+                            Implementação moderna do clássico jogo 2048 com design responsivo e animações suaves. 
+                            Desenvolvido com TypeScript e CSS moderno.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Game Logic</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/vmcolares/2048-game/" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://vmcolares.github.io/2048-game/" target="_blank" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15,3 21,3 21,9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                                Demo Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" style="border: 2px dashed var(--border-medium); background: var(--bg-tertiary);">
+                    <div class="project-content" style="display: flex; align-items: center; justify-content: center; min-height: 300px; text-align: center;">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: var(--space-md); color: var(--text-muted);">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="m12 1 0 6"/>
+                                <path d="m12 17 0 6"/>
+                                <path d="m4.22 4.22 4.24 4.24"/>
+                                <path d="m15.54 15.54 4.24 4.24"/>
+                                <path d="m1 12 6 0"/>
+                                <path d="m17 12 6 0"/>
+                                <path d="m4.22 19.78 4.24-4.24"/>
+                                <path d="m15.54 8.46 4.24-4.24"/>
+                            </svg>
+                            <h4 style="color: var(--text-muted); margin-bottom: var(--space-sm);">Em Desenvolvimento</h4>
+                            <p style="color: var(--text-muted); margin: 0;">
+                                Estou desenvolvendo um novo projeto<br>
+                                Aguarde, em breve mais detalhes!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contato" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Vamos Conversar</h2>
+                <p class="section-subtitle">
+                    Entre em contato comigo para discutir projetos ou oportunidades
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>vmcolares@inf.ufsm.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/virginiamarqus</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p>github.com/vmcolares</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Assunto</label>
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensagem</label>
+                        <textarea id="message" name="message" class="form-textarea" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                        </svg>
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Social Links -->
+            <div style="text-align: center; margin-top: var(--space-3xl);">
+                <div style="display: flex; justify-content: center; gap: var(--space-lg); margin-bottom: var(--space-xl);">
+                    <a href="https://www.linkedin.com/in/virginiamarqus" target="_blank" 
+                       style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: var(--accent-primary); color: white; border-radius: 50%; transition: var(--transition-fast);"
+                       onmouseover="this.style.background='var(--accent-hover)'; this.style.transform='scale(1.1)'"
+                       onmouseout="this.style.background='var(--accent-primary)'; this.style.transform='scale(1)'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="mailto:vmcolares@inf.ufsm.br" 
+                       style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: var(--accent-primary); color: white; border-radius: 50%; transition: var(--transition-fast);"
+                       onmouseover="this.style.background='var(--accent-hover)'; this.style.transform='scale(1.1)'"
+                       onmouseout="this.style.background='var(--accent-primary)'; this.style.transform='scale(1)'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="https://github.com/vmcolares" target="_blank" 
+                       style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: var(--accent-primary); color: white; border-radius: 50%; transition: var(--transition-fast);"
+                       onmouseover="this.style.background='var(--accent-hover)'; this.style.transform='scale(1.1)'"
+                       onmouseout="this.style.background='var(--accent-primary)'; this.style.transform='scale(1)'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="competencias">
-        <h2>Minhas Competências</h2>
-        <p>Confira as tecnologias que eu domino:</p>
-        <div class="competencias-container">
-            <div class="competencia">
-                <i class="fab fa-html5"></i>
-                <p>HTML</p>
-            </div>
-            <div class="competencia">
-                <i class="fab fa-css3-alt"></i>
-                <p>CSS</p>
-            </div>
-            <div class="competencia">
-                <i class="fab fa-js"></i>
-                <p>JavaScript</p>
-            </div>
-            <div class="competencia">
-                <img src="assets/images/typescript.png" alt="typescript">
-                <p>TypeScript</p>
-            </div>
-            <div class="competencia">
-                <i class="fab fa-angular"></i>
-                <p>Angular</p>
-            </div>
-            <div class="competencia">
-                <i class="fab fa-node"></i>
-                <p>Node.js</p>
-            </div>
-            <div class="competencia">
-                <i class="fab fa-java"></i>
-                <p>Java</p>
-            </div>
-            <div class="competencia">
-                <i class="fas fa-database"></i>
-                <p>SQL</p>
-            </div>
-            <div class="competencia">
-                <img src="assets/images/spring-logo.png" alt="Spring Boot">
-                <p>Spring Boot</p>
-            </div>
-            <div class="competencia">
-                <i class="fab fa-bootstrap"></i>
-                <p>Bootstrap</p>
-            </div>
-            <div class="competencia">
-                <i class="fab fa-hire-a-helper"></i>
-                <p>Hibernate</p>
-            </div>
-            <div class="competencia">
-                <i class="fab fa-mdb"></i>
-                <p>MDB</p>
-            </div>
-            <div class="competencia">
-                <i class="fas fa-file-code"></i>
-                <p>JSP</p>
-            </div>
-            <!--
-            <div class="competencia">
-                <i class="fab fa-react"></i>
-                <p>React</p>
-            </div>-->
+    <!-- Footer -->
+    <footer style="background: var(--bg-secondary); padding: var(--space-xl) 0; text-align: center; border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <p style="color: var(--text-muted); margin: 0;">
+                &copy; 2025 Virgínia Colares - Feito com 💻 e ☕
+            </p>
         </div>
-    </section>
-    
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <div class="projetos-container">
-            <!-- Projeto 1 -->
-            <div class="projeto-card">
-                <img src="assets/images/logorx.png" alt="Raio Xcape">
-                <h3>Raio Xcape - Quiz Radiologia</h3>
-                <a href="https://github.com/raioxcape/raioxcape" target="_blank">
-                    Ver no GitHub <i class="fab fa-github"></i>
-                </a>
-            </div>
-    
-            <!-- Projeto 2 -->
-            <div class="projeto-card">
-                <img src="assets/images/logo-universe.png" alt="Universe">
-                <h3>Universe - Teste Vocacional</h3>
-                <a href="https://github.com/elc1074-universe/universe" target="_blank">
-                    Ver no GitHub <i class="fab fa-github"></i>
-                </a>
-            </div>
-    
-            <!-- Projeto 3 -->
-            <div class="projeto-card">
-                <img src="assets/images/riscoemjogo.png" alt="Risco em Jogo">
-                <h3>Risco em Jogo</h3>
-                <a href="https://vmcolares.github.io/risco-em-jogo/" target="_blank">
-                    Ver no GitHub <i class="fab fa-github"></i>
-                </a>
-            </div>
-    
-            <!-- Espaço Reservado - Projeto Futuro -->
-            <div class="projeto-card placeholder" style="height: 326px;">
-                <p>Aguarde ainda estou trabalhando neste projeto...</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Formas de entrar em contato comigo.</p>
-        <div class="contato-icons">
-            <a href="https://www.linkedin.com/in/virginiamarqus" target="_blank" class="contato-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:vmcolares@inf.ufsm.br" class="contato-icon">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://github.com/vmcolares" target="_blank" class="contato-icon">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Virginia Colares - Todos os direitos reservados.</p>
-        <script defer src="script.js"></script>
     </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="src/main.ts"></script>
 </body>
 </html>
